@@ -14,3 +14,7 @@
 2. `pip install requests` 安装python依赖
 3. 在项目根目录下创建`config.js`文件，填写`CHAT_ID` `TOKEN` `USERNAME` `PASSWORD` 四个常量并使用 `export` 导出。
 4. `npm run start` 
+
+## TODO
+* [ ] 自己爽完了给别人爽
+
