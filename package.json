@@ -1,0 +1,19 @@
+{
+  "name": "zucc-check-balance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/babel-cli/bin/babel-node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "cheerio": "^0.22.0",
+    "node-telegram-bot-api": "^0.24.0",
+    "request": "^2.78.0",
+    "superagent": "^2.3.0"
+  }
+}
