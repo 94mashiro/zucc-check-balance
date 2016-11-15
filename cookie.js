@@ -1,14 +1,20 @@
-var exec = require('child_process').exec
-var config = require('./config.js')
-
-exports.getCookie = function () {
+import request from 'superagent'
+import { POSTURL } from './config'
+exports.getCookie = function(username, password) {
   return new Promise(function(resolve, reject) {
-    exec('python login.py '+ config.USERNAME + ' ' + config.PASSWORD, function(err,stdout,stderr){
-      if (err) {
-        reject(err)
-      } else {
-        resolve(stdout.split('\n')[0])
-      }
-    })
+    request
+      .post(POSTURL)
+      .set('Content-Type', 'application/x-www-form-urlencoded')
+      .send({
+        'username': username,
+        'password': password
+      })
+      .end(function(err,res){
+        if (err) {
+          reject(err)
+        } else {
+          resolve(JSON.parse(res.text))
+        }
+      })
   });
-};
+}

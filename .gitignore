@@ -9,6 +9,8 @@ coverage
 # production
 build
 config.js
+_db
+password.js
 
 # misc
 .DS_Store
