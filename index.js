@@ -116,7 +116,7 @@ function add(username, password, chatid) {
       if (user) {
         User.update({
           username: username,
-          password: pwd.encrypt(user)
+          password: pwd.encryptAlt(password, user.dataValues.id)
         }, {
           where: {
             chatid: chatid
